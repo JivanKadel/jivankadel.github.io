@@ -10,6 +10,8 @@
   --color-red: #ef4444;
   --color-blue: #5294ff;
   --color-black: #1a1a1a;
+  --text-muted: rgba(0, 0, 0, 0.6);
+  --text-barely-visible: rgba(0, 0, 0, 0.1);
   --color-sepia: #fef7d2;
   --color-black-light: #1a1a1a;
   --color-black-secondary: #374151;

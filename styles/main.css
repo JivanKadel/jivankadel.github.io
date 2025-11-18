@@ -90,7 +90,8 @@ body.overflow-hidden {
 }
 
 .notebook-lines.skills-page,
-.notebook-lines.contact-page {
+.notebook-lines.contact-page,
+.notebook-lines.index-page {
   background-image: linear-gradient(to bottom, #00000033 1px, transparent 1px);
   background-size: 100% 3.05rem;
 }
