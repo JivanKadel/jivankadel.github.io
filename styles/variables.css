@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --color-primary: #2b8cee;
+  --brand-yellow: #fde68a;
+  --brand-black: #1a1a1a;
+  --background-light: #f6f7f8;
+  --background-dark: #101922;
+  --color-yellow: #fde68a;
+  --color-yellow-light: rgb(253, 230, 139, 0.3);
+  --color-red: #ef4444;
+  --color-blue: #5294ff;
+  --color-black: #1a1a1a;
+  --color-sepia: #fef7d2;
+  --color-black-light: #1a1a1a;
+  --color-black-secondary: #374151;
+  --font-display: "Space Grotesk", sans-serif;
+
+  /* Border radius (DEFAULT values) */
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Box shadows */
+  --shadow-3d-title: 6px 6px 0px var(--brand-black);
+  --shadow-3d-small: 4px 4px 0px var(--brand-black);
+
+  --transition-dur-sm: 300ms;
+  --transition-dur-md: 700ms;
+  --transition-dur-lg: 1000ms;
+
+  /* card specific */
+  --card-radius: 1rem; /* rounded-xl */
+  --card-border: 2px solid #000; /* border-2 border-black */
+  --card-shadow: 4px 4px 0px #000; /* 3d shadow */
+  --overlay-gradient: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
+}

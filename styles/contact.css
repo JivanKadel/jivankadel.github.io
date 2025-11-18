@@ -1,0 +1,219 @@
+@import "./main.css";
+
+.contact-main {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  flex: 1 1 0%;
+}
+.contact-container {
+  max-width: 80rem;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+.contact-connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-links {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-mail-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-align: left;
+  color: inherit;
+  text-decoration: inherit;
+}
+.contact-mail-group:hover .contact-icon-container {
+  color: white;
+  background-color: var(--color-black);
+}
+.contact-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-black);
+  background-color: rgb(0 0 0 / 0.1);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.contact-svg {
+  height: 1.5rem;
+  height: 1.5rem;
+}
+.contact-key {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contact-value {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  color: #374151;
+}
+.contact-form-container {
+  display: flex;
+  position: relative;
+  padding: 1rem;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  border-color: #000000;
+  background-color: var(--color-yellow);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-form-label-text {
+  display: inline-block;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 2px solid var(--color-black);
+  width: fit-content;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--color-black);
+  background-color: var(--color-sepia);
+  box-shadow: var(--shadow-3d-small);
+}
+
+.contact-form-input {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--color-black);
+  width: 100%;
+  min-width: 0;
+  height: 3rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-black);
+  background-color: var(--color-yellow);
+  resize: none;
+
+  &::placeholder {
+    color: #4b5563;
+  }
+}
+
+.contact-form-textarea {
+  display: flex;
+  overflow: hidden;
+  padding: 1rem;
+  flex: 1 1 0%;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--color-black);
+  width: 100%;
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-black);
+  background-color: var(--color-yellow);
+  resize: vertical;
+
+  &::placeholder {
+    color: #4b5563;
+  }
+}
+
+.contact-form-btn {
+  display: flex;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--color-black);
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--color-black);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1f2937;
+  }
+}
+
+@media (min-width: 640px) {
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+  .contact-main {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .contact-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 500px));
+    gap: 4rem;
+  }
+  .contact-main {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}

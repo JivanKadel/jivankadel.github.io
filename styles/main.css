@@ -1,0 +1,342 @@
+@import "./reset.css";
+@import "./variables.css";
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.woff") format("woff");
+  font-weight: 300, 400, 500, 600, 700, 800, 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.top-unset {
+  margin-top: unset;
+}
+.margin-bottom-rem {
+  margin-bottom: 1rem;
+}
+
+.shape-circle {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  width: 4rem;
+  height: 4rem;
+  color: #000000;
+}
+
+.shape-rhombus {
+  position: absolute;
+  bottom: -2rem;
+  left: -2rem;
+  width: 5rem;
+  height: 5rem;
+  color: #000000;
+  --transform-rotate: 45deg;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--color-yellow);
+  font-family: var(--font-display);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+  display: block;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.notebook-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 3rem,
+    var(--color-black) 3rem,
+    var(--color-black) 3.05rem
+  );
+  background-size: 100% 3.05rem;
+}
+
+.notebook-lines.skills-page,
+.notebook-lines.contact-page {
+  background-image: linear-gradient(to bottom, #00000033 1px, transparent 1px);
+  background-size: 100% 3.05rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-decoration: none;
+  z-index: 100;
+}
+
+.menu-toggle {
+  z-index: 50;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .material-symbols-outlined {
+  font-size: 1.875rem;
+  color: var(--color-black);
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(253, 230, 138, 0.95);
+  backdrop-filter: blur(4px);
+  transform: translateX(-100%);
+  transition: transform 500ms ease-in-out;
+}
+
+.nav-overlay.active {
+  transform: translateX(0);
+}
+
+.nav-overlay .notebook-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.nav-link {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color 200ms;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.main {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.hero-container {
+  position: relative;
+  max-width: 1024px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.hero-title-medium {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+.title-margin-md {
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  margin-top: 0.5rem;
+  max-width: 42rem;
+  padding: 0.5rem;
+  background-color: var(--color-yellow);
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+/* Neo-Brutal border and shadows */
+.title-3d {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-yellow);
+  border: 2px solid var(--color-black);
+  box-shadow: 6px 6px 0px var(--color-black);
+  color: var(--color-black);
+  z-index: 5;
+}
+
+.title-medium {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.title-small {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-top: 0.5rem;
+}
+
+.button-3d {
+  display: flex;
+  overflow: hidden;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-black);
+  box-shadow: 4px 4px 0px var(--color-black);
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  color: var(--color-black);
+  background-color: var(--color-yellow);
+  cursor: pointer;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0%,
+  100% {
+    top: 0;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    top: 50px;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .header {
+    padding: 2.5rem;
+  }
+
+  .main {
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  .hero-title-medium {
+    font-size: 2.5rem;
+  }
+  .title-medium {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+  .title-small {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 3rem;
+  }
+  .hero-title {
+    font-size: 6rem;
+  }
+  .hero-title-medium {
+    font-size: 4rem;
+  }
+
+  .title-medium {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+  .title-small {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+}

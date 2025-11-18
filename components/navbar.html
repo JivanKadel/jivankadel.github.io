@@ -1,0 +1,58 @@
+<header class="header">
+  <div class="container">
+    <a class="logo" href="#">Jivan Kadel</a>
+    <button
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      class="menu-toggle"
+      id="menu-toggle"
+    >
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay">
+  <div class="notebook-lines"></div>
+  <nav class="nav">
+    <a class="nav-link" href="#">Work</a>
+    <a class="nav-link" href="#">About</a>
+    <a class="nav-link" href="#">Contact</a>
+  </nav>
+</div>
+<script>
+  // Menu Toggle Functionality
+  const menuToggle = document.getElementById("menu-toggle");
+  const navOverlay = document.getElementById("nav-overlay");
+  const menuIcon = menuToggle.querySelector(".material-symbols-outlined");
+
+  menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+
+    // Toggle aria-expanded attribute
+    menuToggle.setAttribute("aria-expanded", !isExpanded);
+
+    // Toggle navigation overlay visibility
+    navOverlay.classList.toggle("active");
+
+    // Toggle body overflow
+    document.body.classList.toggle("overflow-hidden");
+
+    // Change menu icon
+    if (!isExpanded) {
+      menuIcon.textContent = "close";
+    } else {
+      menuIcon.textContent = "menu";
+    }
+  });
+
+  // Close menu when clicking navigation links
+  navOverlay.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      navOverlay.classList.remove("active");
+      document.body.classList.remove("overflow-hidden");
+      menuIcon.textContent = "menu";
+    });
+  });
+</script>

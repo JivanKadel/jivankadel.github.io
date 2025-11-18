@@ -1,0 +1,60 @@
+@import "./reset.css";
+@import "./variables.css";
+@import "./main.css";
+
+.home-main {
+  margin-top: 3rem;
+}
+/* Decorative Shapes */
+.shape {
+  position: absolute;
+}
+
+.shape-diamond {
+  top: -2rem;
+  left: -5rem;
+  width: 12rem;
+  height: 12rem;
+  background-color: var(--color-red);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: rotate(12deg);
+}
+
+.shape-trapezoid {
+  bottom: 2.5rem;
+  right: -6rem;
+  width: 14rem;
+  height: 14rem;
+  background-color: var(--color-blue);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  transform: rotate(-12deg);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-black);
+}
+
+.scroll-content .material-symbols-outlined {
+  font-size: 1.875rem;
+  /* position: relative;
+  animation: bounce 2s infinite; */
+}
+
+.scroll-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

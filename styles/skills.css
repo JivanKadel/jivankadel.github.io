@@ -1,0 +1,92 @@
+@import "./main.css";
+
+.skills-main {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2.5rem;
+  margin-top: 1rem;
+  flex-grow: 1;
+}
+
+.skills-title {
+  display: flex;
+  padding-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 5;
+}
+
+.shape-random {
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+  z-index: 0;
+  width: 12rem;
+  height: 12rem;
+  opacity: 0.6;
+}
+
+.shape-random-er {
+  position: absolute;
+  right: 0;
+  bottom: -2.5rem;
+  z-index: 0;
+  width: 8rem;
+  height: 8rem;
+  opacity: 0.5;
+}
+
+.skills-grid {
+  display: grid;
+  padding-top: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  column-gap: 0.2rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  height: 5rem;
+}
+
+.skill-item:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.skill-label {
+  color: var(--color-black);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.skill-value {
+  margin-top: 0;
+  color: #111827;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .skills-main {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
+  }
+  .skill-item {
+    max-width: 250px;
+  }
+}
