@@ -1,17 +1,26 @@
 :root {
-  /* Colors */
+  /* main colors / brand colors */
   --color-primary: #2b8cee;
   --brand-yellow: #fde68a;
   --brand-black: #1a1a1a;
+
+  /* base bg colors */
   --background-light: #f6f7f8;
   --background-dark: #101922;
+
   --color-yellow: #fde68a;
   --color-yellow-light: rgb(253, 230, 139, 0.3);
+
+  /* colors */
   --color-red: #ef4444;
   --color-blue: #5294ff;
   --color-black: #1a1a1a;
+
+  /* transparency */
   --text-muted: rgba(0, 0, 0, 0.6);
   --text-barely-visible: rgba(0, 0, 0, 0.1);
+  --text-red-muted: rgb(239, 68, 68, 0.8);
+
   --color-sepia: #fef7d2;
   --color-black-light: #1a1a1a;
   --color-black-secondary: #374151;
@@ -27,18 +36,73 @@
   --shadow-3d-title: 6px 6px 0px var(--brand-black);
   --shadow-3d-small: 4px 4px 0px var(--brand-black);
 
+  /* transitions */
   --transition-dur-sm: 300ms;
   --transition-dur-md: 700ms;
   --transition-dur-lg: 1000ms;
 
+  /* defaults */
+  --bg: #f6f7f8;
+  --text: #111827;
+  --text-muted: rgba(0, 0, 0, 0.6);
+  --border-color: #111827;
+  --shadow-color: #111827;
+
   /* card specific */
-  --card-radius: 1rem; /* rounded-xl */
-  --card-border: 2px solid #000; /* border-2 border-black */
-  --card-shadow: 4px 4px 0px #000; /* 3d shadow */
+  --card-radius: 1rem;
+  --card-border: 2px solid #000;
+  --card-shadow: 4px 4px 0px #000;
+
+  /* overlay */
   --overlay-gradient: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.3),
     transparent
   );
+}
+
+html[data-theme="sepia"] {
+  --bg: #f5ecd3;
+  --text: #3a2f1d;
+  --text-muted: rgba(58, 47, 29, 0.6);
+  --border-color: #3a2f1d;
+  --shadow-color: #3a2f1d;
+  --brand-yellow: #e6d49b;
+
+  --overlay-gradient: linear-gradient(
+    to top,
+    rgba(58, 47, 29, 0.8),
+    rgba(58, 47, 29, 0.3),
+    transparent
+  );
+}
+
+html[data-theme="dark"] {
+  --bg: #0c0c0c;
+  --text: #f3f3f3;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --border-color: #f3f3f3;
+  --shadow-color: #f3f3f3;
+  --brand-yellow: #f5d37a;
+
+  --overlay-gradient: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+}
+
+html {
+  transition: background-color var(--transition-dur-md) ease,
+    color var(--transition-dur-md) ease,
+    border-color var(--transition-dur-md) ease,
+    fill var(--transition-dur-md) ease, stroke var(--transition-dur-md) ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
 }
